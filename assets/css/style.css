@@ -71,3 +71,7 @@ background-color: transparent;
 padding: 15px;
 border: none;
 }
+
+i {
+    pointer-events: none;
+}

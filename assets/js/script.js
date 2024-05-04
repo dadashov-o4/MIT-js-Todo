@@ -35,18 +35,18 @@ function addTodo(e) {
 
     todoDivi.appendChild(liElementi)
 
-    const butonlarinDivi = createElement("div")
+    const butonlarinDivi = document.createElement("div")
     butonlarinDivi.classList.add("butonlar")
 
     todoDivi.appendChild(butonlarinDivi)
 
-    const editBtn = createElement("button")
+    const editBtn = document.createElement("button")
     editBtn.classList.add("edit-btn")
     editBtn.innerHTML = `<i class="fa-solid fa-check-double"></i>`
 
     butonlarinDivi.appendChild(editBtn)
 
-    const deleteBtn = createElement("button")
+    const deleteBtn = document.createElement("button")
     deleteBtn.classList.add("delete-btn")
     deleteBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
 
@@ -64,6 +64,6 @@ function  editOrDelete(e){
         kliklenenElement.parentElement.parentElement.classList.toggle("done")
     }
     if(kliklenenElement.classList.contains("delete-btn")){
-        kliklenenElement.parentElement.parentElement.classList.toggle("delete")
+        kliklenenElement.parentElement.parentElement.classList.add("delete")
     }
 }
